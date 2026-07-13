@@ -23,7 +23,7 @@ function initChatbot() {
         },
         {
             keys: ['bobbin', 'pfaff', 'passport', 'metal'],
-            answer: "Careful with Pfaff Passport bobbins! They use specific plastic bobbins with a slight concave center. Never use generic flat metal bobbins in them; you'll damage the hook race and mess up your tension. Look for Pfaff Category J bobbins on our Shopify store. We sell them pre-bundled in our Essentials Kit."
+            answer: "Careful with Pfaff Passport bobbins! They use specific plastic bobbins with a slight concave centre. Never use generic flat metal bobbins in them; you'll damage the hook race and mess up your tension. Look for Pfaff Category J bobbins on our Shopify store. We sell them pre-bundled in our Essentials Kit."
         },
         {
             keys: ['tension', 'bunching', 'nesting', 'looping'],
