@@ -238,24 +238,23 @@ def create_pitch_deck():
         bullets=[
             "We rebuild and manage the e-commerce store remotely, routing machine orders directly to UK distributors.",
             "Spare parts are packaged into high-margin kits managed by a 3rd-party logistics warehouse.",
-            "We split online net profits 50/50, generating passive income from your brand.",
+            "We share online net profits, generating passive income from your brand (final terms decided by you).",
             "We manage marketing, Stripe payment setups, and dropship tracking interfaces."
         ],
         visual_title="JV Profit Allocation",
         visual_lines=[
             "**DIGITAL PRODUCTS & SHIPPED SALES**",
-            "- 50% Owner Share of Net Profits",
-            "- 50% Digital Expert Share",
+            "- Profit share on Owner-approved terms",
             "---",
             "**REPAIR LEADS SYSTEM**",
-            "- 70% of lead fee to Workshop / Tech",
-            "- 30% Booking Lead Gen Fee to platform",
+            "- Lion's share of lead fee to mobile tech",
+            "- Platform booking lead commission",
             "---",
             "**LIABILITY LIMITS**",
             "- Owner pays £0 for remote operations",
             "- Expert pays £0 for workshop costs"
         ],
-        quote="Your website makes sales and handles fulfilment automatically, sending half the profits straight to you."
+        quote="Your website makes sales and handles fulfilment automatically, sharing the profits straight to you."
     )
 
     # ---------------------------------------------------------
@@ -324,7 +323,7 @@ def create_pitch_deck():
             "Transition (Day 1-90): Sign JV, run clearance sale, digitize patterns, record workbench video courses, and launch Shopify/Stan Store.",
             "Stabilization (Day 91-180): Prove digital volume and document property yields (commercial + upper flat).",
             "Eventual Property Sale (Scenario A): Workshop signs a leaseback to guarantee a turnkey commercial yield for buyers.",
-            "Eventual Property Sale (Scenario B): Wind down workshop & pivot 100% to our remote mobile tech network (zero physical footprint)."
+            "Eventual Property Sale (Scenario B): Wind down workshop & pivot repairs to our remote mobile tech network (zero physical footprint)."
         ],
         visual_title="Property Sale Exit Paths",
         visual_lines=[
@@ -337,7 +336,7 @@ def create_pitch_deck():
             "- Workshop wound down at property sale",
             "- Leads routed to mobile tech network",
             "- Zero physical workshop overhead",
-            "- Digital business remains 100% active"
+            "- Digital business remains active"
         ],
         quote="A clear transition roadmap that supports your lifestyle now, while maximizing your property sale value later."
     )
