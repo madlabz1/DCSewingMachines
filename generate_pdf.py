@@ -184,7 +184,7 @@ def create_pitch_deck():
             "You own two highly valuable assets: a prime piece of Birmingham real estate and a recognized brand name.",
             "Our remote partnership manages the digital storefront, dropshipping, and marketing campaigns.",
             "You maintain complete ownership of your physical property and local workshop.",
-            "No rent, no overhead liabilities, and no remote operational costs for you to cover."
+            "There is no rent to pay, but operational funds and access to suppliers will be made available to carry out some of the work."
         ],
         visual_title="Decoupled Asset Profile",
         visual_lines=[
@@ -199,7 +199,7 @@ def create_pitch_deck():
             "- Automated lead booking software",
             "- Nationwide mobile repair network"
         ],
-        quote="We run the technology remotely; you keep your workshop and building. A true risk-free partnership."
+        quote="No rent to pay, with full supplier access and operational funding provided to drive the business."
     )
 
     # ---------------------------------------------------------
@@ -238,23 +238,25 @@ def create_pitch_deck():
         bullets=[
             "We rebuild and manage the e-commerce store remotely, routing machine orders directly to UK distributors.",
             "Spare parts are packaged into high-margin kits managed by a 3rd-party logistics warehouse.",
-            "We share online net profits, generating passive income from your brand (final terms decided by you).",
+            "We split online net profits 50/50, generating passive income from your brand.",
             "We manage marketing, Stripe payment setups, and dropship tracking interfaces."
         ],
         visual_title="JV Profit Allocation",
         visual_lines=[
             "**DIGITAL PRODUCTS & SHIPPED SALES**",
-            "- Profit share on Owner-approved terms",
+            "- 50% Owner Share of Net Profits",
+            "- 50% Digital Expert Share",
             "---",
             "**REPAIR LEADS SYSTEM**",
             "- Lion's share of lead fee to mobile tech",
             "- Platform booking lead commission",
+            "- (Exact split percentages decided by Owner)",
             "---",
             "**LIABILITY LIMITS**",
             "- Owner pays £0 for remote operations",
             "- Expert pays £0 for workshop costs"
         ],
-        quote="Your website makes sales and handles fulfilment automatically, sharing the profits straight to you."
+        quote="Your website makes sales and handles fulfilment automatically, splitting the profits 50/50."
     )
 
     # ---------------------------------------------------------
@@ -323,7 +325,7 @@ def create_pitch_deck():
             "Transition (Day 1-90): Sign JV, run clearance sale, digitize patterns, record workbench video courses, and launch Shopify/Stan Store.",
             "Stabilization (Day 91-180): Prove digital volume and document property yields (commercial + upper flat).",
             "Eventual Property Sale (Scenario A): Workshop signs a leaseback to guarantee a turnkey commercial yield for buyers.",
-            "Eventual Property Sale (Scenario B): Wind down workshop & pivot repairs to our remote mobile tech network (zero physical footprint)."
+            "Eventual Property Sale (Scenario B): Wind down workshop & pivot repairs to our remote mobile tech network (zero physical footprint, repair splits determined by you)."
         ],
         visual_title="Property Sale Exit Paths",
         visual_lines=[
