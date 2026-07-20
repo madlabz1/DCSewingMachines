@@ -203,30 +203,27 @@ def create_pitch_deck():
     )
 
     # ---------------------------------------------------------
-    # PAGE 3: FOCUS ON CRAFT
+    # PAGE 3: 100% HANDS-OFF REPAIRS
     # ---------------------------------------------------------
     pdf.add_page()
     pdf.draw_slide_layout(
-        title="The Workshop: Focus on Craft",
+        title="The Repair Network: 100% Hands-Off",
         bullets=[
-            "Close the storefront counter to walk-in retail shoppers to eliminate daily retail stress.",
-            "The ground floor remains your private, quiet workshop hub for machinery service.",
-            "Customers book repairs online and drop off machines in a secure lobby locker, sending jobs straight to your bench.",
-            "Eliminates the time spent managing loose haberdashery inventory and stock shelves."
+            "Customers to book repairs and servicing online via our automated scheduling assistant.",
+            "All servicing, mechanical repairs, and maintenance are carried out by certified 3rd-party vendors.",
+            "You collect an agreed referral fee for every lead generated, with zero bench labor required from you."
         ],
-        visual_title="Workshop Layout",
+        visual_title="Hands-Off Referrals",
         visual_lines=[
-            "**FRONT LOBBY**",
-            "- Closed to retail walk-ins",
-            "- Fitted with secure drop-off lockers",
-            "- Digital customer drop-off code",
+            "- Customer books repairs online",
+            "- Dispatch to certified 3rd-party vendor",
+            "- Vendor executes parts & labor",
             "---",
-            "**REAR WORKSHOP**",
-            "- Restructured as a quiet workshop",
-            "- Dedicated machinery bench workspace",
-            "- Free of customer counter demands"
+            "**REVENUE GENERATION**",
+            "- JV entity collects referral fee",
+            "- Split determined entirely by Owner"
         ],
-        quote="No more standing behind a retail counter. Focus 100% on repairs and servicing on your own terms."
+        quote="Repairs are dispatched directly to trusted 3rd-party engineers. You collect a referral fee, while remaining 100% hands-off."
     )
 
     # ---------------------------------------------------------
@@ -267,7 +264,7 @@ def create_pitch_deck():
         title="Digital Asset Launch Schedule",
         bullets=[
             "Days 1-30 (Audit & Digitise): Convert your best-selling physical pattern sheets into print-at-home digital PDFs.",
-            "Days 31-60 (Filming & Integration): Film high-yield repair masterclasses at the workbench during advisory hours and load them onto Stan Store/Shopify.",
+            "Days 31-60 (Technical Archiving): Index mechanical guides, manuals, and troubleshooting paths to seed our AI assistant database.",
             "Days 61-90 (Pre-sales & Community): Launch pre-sales for the recurring monthly digital community (The Pershore Club).",
             "Digital products build 100% profit margins, boosting future brand valuation."
         ],
@@ -278,41 +275,41 @@ def create_pitch_deck():
             "- Outline stitch troubleshooting courses",
             "---",
             "**MONTH 2**",
-            "- Record workbench video modules",
-            "- Upload assets to Shopify/Stan Store",
+            "- Index manuals & support guides",
+            "- Seed AI diagnostic engine",
             "---",
             "**MONTH 3**",
             "- Launch Club community pre-sales",
-            "- Open Digital Academy section online"
+            "- Automate referral lead dispatch"
         ],
         quote="Create high-margin digital products once, sell them forever at 100% profit margin."
     )
 
     # ---------------------------------------------------------
-    # PAGE 6: TECHNICAL DIRECTOR ROLE
+    # PAGE 6: TECHNICAL ADVISORY ROLE
     # ---------------------------------------------------------
     pdf.add_page()
     pdf.draw_slide_layout(
-        title="The 6-Hour Technical Director Role",
+        title="The Technical Advisory Role",
         bullets=[
-            "No more exhausting 8-hour days running a shop counter.",
-            "Act as 'Technical Director': guide junior technicians and consult on complex repairs.",
-            "Contribute your technical insights to train our online support assistant, preserving your expertise.",
-            "Your advisory time is limited to a maximum of 6 hours per week, completely on your schedule."
+            "Act as 'Technical Advisor': consult on digital content accuracy and platform quality standards.",
+            "Contribute your historical mechanical insights to train our AI support assistant, preserving your expertise.",
+            "Your advisory time is strictly remote and advisory, capped at a maximum of 6 hours per week, completely on your schedule.",
+            "100% free from manual repair labor, storefront duties, or customer-facing tasks."
         ],
         visual_title="Advisory Breakdown",
         visual_lines=[
             "**WEEKLY ADVISORY (6 HRS MAX)**",
-            "- 2 Hours: Online/Phone diagnostics",
-            "- 2 Hours: Junior associate mentoring",
-            "- 2 Hours: Mobile technician QA check",
+            "- Platform content verification",
+            "- AI diagnostic database seeding",
+            "- Service quality audits",
             "---",
-            "**EXEMPTIONS FROM MANUAL LABOR**",
-            "- No customer greeting duties",
-            "- No lifting heavy stock (>10kg)",
-            "- No shelf restocking requirements"
+            "**EXEMPTIONS FROM OPERATIONS**",
+            "- No manual repair bench work",
+            "- No customer counter coverage",
+            "- No storefront inventory duties"
         ],
-        quote="We want your engineering expertise, not your physical labor. Work on your schedule, up to 6 hours a week."
+        quote="We want your decades of mechanical knowledge to guide the platform, not your physical labor. 100% hands-off from bench work."
     )
 
     # ---------------------------------------------------------
@@ -322,25 +319,22 @@ def create_pitch_deck():
     pdf.draw_slide_layout(
         title="The Roadmap & Property Exit",
         bullets=[
-            "Transition (Day 1-90): Sign JV, run clearance sale, digitize patterns, record workbench video courses, and launch Shopify/Stan Store.",
-            "Stabilization (Day 91-180): Prove digital volume and document property yields (commercial + upper flat).",
-            "Eventual Property Sale (Scenario A): Workshop signs a leaseback to guarantee a turnkey commercial yield for buyers.",
-            "Eventual Property Sale (Scenario B): Wind down workshop & pivot repairs to our remote mobile tech network (zero physical footprint, repair splits determined by you)."
+            "Transition (Day 1-90): Sign JV, run clearance sale, digitize patterns, and launch e-commerce and referral engines.",
+            "Stabilization (Day 91-180): Lease the ground-floor space to commercial tenants and document passive property yields.",
+            "Eventual Property Sale: Sell the real estate at maximum value with active commercial and residential yields, while the remote platform runs unaffected."
         ],
         visual_title="Property Sale Exit Paths",
         visual_lines=[
-            "**SCENARIO A: TURNKEY LEASEBACK**",
-            "- Converted workshop signs lease",
-            "- Attracts investor with occupied yield",
-            "- Owner sells real estate at top-market",
+            "**TRANSITION STAGE**",
+            "- Launch automated referral lead engine",
+            "- Clear retail storefront inventory",
             "---",
-            "**SCENARIO B: MOBILE PIVOT**",
-            "- Workshop wound down at property sale",
-            "- Leads routed to mobile tech network",
-            "- Zero physical workshop overhead",
-            "- Digital business remains active"
+            "**PROPERTY HARVEST**",
+            "- Ground floor commercial lease",
+            "- High-yield turnkey building sale",
+            "- Platform continues 100% remotely"
         ],
-        quote="A clear transition roadmap that supports your lifestyle now, while maximizing your property sale value later."
+        quote="A clear transition roadmap that frees you from daily operations immediately, while maximizing your property exit value."
     )
     
     # Save output
