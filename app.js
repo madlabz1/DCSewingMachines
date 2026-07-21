@@ -56,7 +56,7 @@ function initChatbot() {
         },
         {
             keys: ['advisor', 'owner', 'who are you', 'expert'],
-            answer: "I am the Digital Technical Assistant for DC Sewing Machines. I have been trained on our engineering logs and service guides compiled by our Head Advisor, Don Campbell, who has over 35 years of machine maintenance experience."
+            answer: "I am the Digital Technical Assistant for DC Sewing Machines. I have been trained on our engineering logs and service guides compiled by our senior engineering team, who have over 35 years of machinery maintenance experience."
         }
     ];
 
