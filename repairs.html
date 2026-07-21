@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repair Bookings & Servicing | DC Sewing Machines Birmingham</title>
+    <meta name="description" content="Schedule sewing machine maintenance. Local Birmingham servicing and home visits, managed by our certified 3rd-party engineer network.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="DC Sewing Machines Logo" class="logo-icon">
+                <span class="logo-text">DC <span>Sewing Machines</span></span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Catalogue</a></li>
+                    <li><a href="repairs.html" class="active">Repairs & Servicing</a></li>
+                    <li><a href="academy.html">Digital Academy</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="repairs.html" class="btn btn-secondary btn-sm"><i class="fa-solid fa-calendar-check"></i> Book Service</a>
+                <a href="shop.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-shopping-bag"></i> Shopify Store</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="section-header">
+            <h2 class="section-title">Support & Service Centre</h2>
+            <p class="section-subtitle">Troubleshoot sewing machine issues in real-time with our technical assistant, or book a service appointment with our certified 3rd-party engineer network.</p>
+        </div>
+
+        <!-- Two Column Interactive Section -->
+        <section class="interactive-section">
+            
+            <!-- Column 1: AI Chatbot -->
+            <div class="chatbot-container">
+                <div class="chatbot-header">
+                    <div class="chatbot-avatar">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="chatbot-info">
+                        <h4>Digital Support Assistant</h4>
+                        <p>Online &amp; Seeding Solutions</p>
+                    </div>
+                </div>
+                
+                <div id="chat-messages" class="chatbot-messages">
+                    <div class="msg msg-bot">
+                        Hello! Welcome to the DC Sewing Machines technical helper. I am trained on decades of sewing machinery repair logs. How can I help you troubleshoot your machine or match spare parts today?
+                    </div>
+                </div>
+
+                <!-- Suggestion Chips -->
+                <div class="chat-suggestions">
+                    <button class="btn-suggestion">Needle for Denim</button>
+                    <button class="btn-suggestion">Pfaff Bobbin compatibility</button>
+                    <button class="btn-suggestion">Tension nesting fix</button>
+                    <button class="btn-suggestion">E6 Error Brother FS40</button>
+                </div>
+
+                <div class="chatbot-input-area">
+                    <input type="text" id="chat-input" class="chatbot-input" placeholder="Type a sewing machine question (e.g. tension, bobbins)...">
+                    <button id="chat-send" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+
+            <!-- Column 2: Booking Form -->
+            <div class="booking-container">
+                <div class="booking-header">
+                    <h3>Service &amp; Repair Scheduler</h3>
+                    <p>All physical servicing, mechanical repairs, and maintenance are carried out by our trusted 3rd-party mobile technicians and local associates. You are billed an agreed referral fee.</p>
+                </div>
+
+                <form id="repair-booking-form" class="booking-form">
+                    <div class="form-group">
+                        <label for="repair-type">Select Service Type</label>
+                        <select id="repair-type" class="form-control" required>
+                            <option value="" disabled selected>Choose service needed...</option>
+                            <option value="tension">Tension / Timing Tune-up (£45.00)</option>
+                            <option value="standard">Standard Service / Polish (£75.00)</option>
+                            <option value="motor">Electrical &amp; Motor Repair (From £120.00)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service-method">Service Method</label>
+                        <select id="service-method" class="form-control" required>
+                            <option value="" disabled selected>Choose fulfilment method...</option>
+                            <option value="dropoff">Lobby Drop-off (Secure locker drop-off at Pershore Rd)</option>
+                            <option value="mobile">In-Home Mobile Technician Visit (+£15.00 travel surcharge)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cust-name">Full Name</label>
+                        <input type="text" id="cust-name" class="form-control" placeholder="Jane Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cust-email">Email Address</label>
+                        <input type="email" id="cust-email" class="form-control" placeholder="jane@example.com" required>
+                    </div>
+
+                    <div id="booking-summary" class="booking-summary">
+                        <!-- Populated by JavaScript -->
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-calendar-check"></i> Complete Service Booking</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Service Network FAQ -->
+        <section id="faq" style="margin-bottom: 80px;">
+            <div class="section-header">
+                <h2 class="section-title">Servicing Commitments</h2>
+                <p class="section-subtitle">Restructuring operations for certified service delivery.</p>
+            </div>
+            
+            <div class="grid-features">
+                <div class="card feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-user-gear"></i></div>
+                    <h3>Certified 3rd Parties</h3>
+                    <p>All bench repairs and in-home visits are dispatched to verified, experienced engineers. The JV serves as lead-generation and booking manager.</p>
+                </div>
+                <div class="card feature-card teal-accent">
+                    <div class="feature-icon"><i class="fa-solid fa-calculator"></i></div>
+                    <h3>Referral Pricing</h3>
+                    <p>Referral splits and booking fee rates are managed dynamically. The 3rd-party vendor performs the physical work, and the digital brand collects the referral fee.</p>
+                </div>
+                <div class="card feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-circle-question"></i></div>
+                    <h3>Technical Advisor</h3>
+                    <p>Mr. Don Campbell provides light technical consulting (up to 6 hours a week) to audit quality and ensure the AI chatbot remains seeded with correct data.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>DC SEWING MACHINES</h3>
+                <p>Modernising the digital footprint of a Birmingham legacy. Premium hardware, digital downloads, and hands-off service coordination.</p>
+                <p><i class="fa-solid fa-location-dot"></i> 1774 Pershore Rd, Birmingham, B30 3BG</p>
+            </div>
+            <div class="footer-col">
+                <h4>Platform Navigation</h4>
+                <ul>
+                    <li><a href="shop.html">Shopify Catalog</a></li>
+                    <li><a href="repairs.html">Repair Scheduling</a></li>
+                    <li><a href="academy.html">Digital Downloads</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Retirement Strategy</h4>
+                <ul>
+                    <li><a href="emails/email1_announcement.html" target="_blank">Retirement Announcement Email</a></li>
+                    <li><a href="emails/email2_clearing_sale.html" target="_blank">Inventory Clearance Email</a></li>
+                    <li><a href="emails/email3_digital_welcome.html" target="_blank">Digital Welcome Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 DC Sewing Machines Ltd. All Rights Reserved.</p>
+            <p>Developed under the Joint Venture Digital Model.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

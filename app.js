@@ -1,9 +1,22 @@
 // DC Sewing Machines - Client-side Interactive Logic
 
 document.addEventListener('DOMContentLoaded', () => {
-    initChatbot();
-    initBooking();
-    initProducts();
+    // Page-specific module initializations
+    if (document.getElementById('chat-messages')) {
+        initChatbot();
+    }
+    
+    if (document.getElementById('repair-booking-form')) {
+        initBooking();
+    }
+    
+    if (document.querySelector('.filters-sidebar')) {
+        initShopFilters();
+    }
+    
+    if (document.querySelector('.grid-products')) {
+        initProductRedirects();
+    }
 });
 
 /* ==========================================================================
@@ -35,7 +48,7 @@ function initChatbot() {
         },
         {
             keys: ['service', 'repair', 'clean', 'oil'],
-            answer: "Standard household machines need a service every 12 to 18 months to clean out lint and oil the internal gears. You can book a service slot with our technician network at the Pershore Rd workshop or request a mobile technician visit using our online scheduler."
+            answer: "Standard household machines need a service every 12 to 18 months to clean out lint and oil the internal gears. You can book a service slot with our 3rd-party technician network using our online scheduler."
         },
         {
             keys: ['price', 'cost', 'fee', 'charge'],
@@ -43,14 +56,14 @@ function initChatbot() {
         },
         {
             keys: ['advisor', 'owner', 'who are you', 'expert'],
-            answer: "I am the Digital Technical Assistant for DC Sewing Machines. I have been trained on our engineering logs and service guides compiled by our Head Engineer, who has over 35 years of machine maintenance experience."
+            answer: "I am the Digital Technical Assistant for DC Sewing Machines. I have been trained on our engineering logs and service guides compiled by our Head Advisor, Don Campbell, who has over 35 years of machine maintenance experience."
         }
     ];
 
     const defaultResponses = [
         "That's a good question! I recommend checking your threading first. If it's a model-specific question, try typing in brand names like 'Brother', 'PFAFF', or ask about 'bobbin matching'.",
         "Interesting issue. Most sewing machine glitches are caused by lint in the hook area or an old needle. Try replacing the needle first. If you need a professional look, you can schedule an appointment on the right!",
-        "If it is a mechanical timing issue, it's best to book a service with one of our mobile technicians or schedule a drop-off at our Pershore Rd workshop."
+        "If it is a mechanical timing issue, it's best to book a service with one of our certified 3rd-party mobile technicians using our online scheduler."
     ];
 
     function addMessage(text, sender) {
@@ -155,9 +168,9 @@ function initBooking() {
 
         let successMessage = '';
         if (method === 'mobile') {
-            successMessage = `Thank you, ${name}! Your booking has been received. A certified technician in your area has been notified and will contact you within 24 hours to confirm the appointment.`;
+            successMessage = `Thank you, ${name}! Your booking has been received. A certified 3rd-party mobile technician has been notified and will contact you within 24 hours to confirm the repair appointment.`;
         } else {
-            successMessage = `Thank you, ${name}! Your workshop slot is reserved. You will receive an email shortly with your drop-off code for the secure lobby locker at 1774 Pershore Rd.`;
+            successMessage = `Thank you, ${name}! Your slot is reserved. You will receive an email shortly with your drop-off code for the secure lobby locker at 1774 Pershore Rd. The repair will be serviced by a certified 3rd-party engineering partner.`;
         }
 
         alert(successMessage);
@@ -167,19 +180,77 @@ function initBooking() {
 }
 
 /* ==========================================================================
-   Products Module (Shopify/Stan Store Redirection)
+   Shop Filters Module (Category & Price Filtering)
    ========================================================================== */
-function initProducts() {
-    const productGrid = document.querySelector('.grid-products');
-    
-    productGrid.addEventListener('click', (e) => {
-        const btn = e.target.closest('.btn-add-cart');
-        if (btn) {
-            const card = btn.closest('.card');
-            const productName = card.querySelector('h3').textContent;
-            const platform = btn.textContent.includes('Shopify') ? 'Shopify' : 'Stan Store';
+function initShopFilters() {
+    const filterButtons = document.querySelectorAll('.btn-filter');
+    const cards = document.querySelectorAll('#catalog-products .card');
+
+    let activeCategory = 'all';
+    let activePriceRange = 'all';
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const parent = e.target.parentElement;
             
-            alert(`Redirecting to our secure ${platform} product page for "${productName}"...`);
-        }
+            // Toggle active state in the siblings
+            parent.querySelectorAll('.btn-filter').forEach(sibling => {
+                sibling.classList.remove('active');
+            });
+            e.target.classList.add('active');
+
+            // Determine if category or price was clicked
+            if (e.target.hasAttribute('data-category')) {
+                activeCategory = e.target.getAttribute('data-category');
+            } else if (e.target.hasAttribute('data-price')) {
+                activePriceRange = e.target.getAttribute('data-price');
+            }
+
+            filterProducts();
+        });
+    });
+
+    function filterProducts() {
+        cards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            const price = parseFloat(card.getAttribute('data-price'));
+
+            let matchCategory = (activeCategory === 'all' || category === activeCategory);
+            let matchPrice = true;
+
+            if (activePriceRange === 'under-50') {
+                matchPrice = (price < 50);
+            } else if (activePriceRange === '50-300') {
+                matchPrice = (price >= 50 && price <= 300);
+            } else if (activePriceRange === 'over-300') {
+                matchPrice = (price > 300);
+            }
+
+            if (matchCategory && matchPrice) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+}
+
+/* ==========================================================================
+   Product Redirect Alerts (Shopify/Stan Store Redirection)
+   ========================================================================== */
+function initProductRedirects() {
+    const productGrids = document.querySelectorAll('.grid-products');
+    
+    productGrids.forEach(grid => {
+        grid.addEventListener('click', (e) => {
+            const btn = e.target.closest('.btn-add-cart');
+            if (btn) {
+                const card = btn.closest('.card');
+                const productName = card.querySelector('h3').textContent;
+                const platform = btn.textContent.includes('Shopify') ? 'Shopify' : 'Stan Store';
+                
+                alert(`Redirecting to our secure ${platform} product page for "${productName}"...`);
+            }
+        });
     });
 }
